@@ -72,7 +72,10 @@ const getCfRole = (rating) => {
 
 // Format contest time
 const formatStartTime = (startTimeSeconds) => {
+  console.log(startTimeSeconds)
   const date = new Date(startTimeSeconds * 1000);
+  date.setHours(date.getHours() + 0); 
+
   return date.toLocaleString();
 };
 
